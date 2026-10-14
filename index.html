@@ -1,573 +1,645 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Ruphak Varmaa S — Portfolio</title>
-  <meta content="Portfolio of Ruphak Varmaa S — software engineering, full-stack web, cloud, projects and contact." name="description">
-  <meta content="Ruphak, Varmaa, portfolio, software engineer, developer, full stack, cloud, projects" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ruphak Varmaa S — Software Engineering Student</title>
+  <meta name="description" content="Ruphak Varmaa S is a Computer Science undergraduate in India building clean, reliable web apps and learning cloud (AWS/Azure). Projects, skills, experience and contact.">
+  <meta name="author" content="Ruphak Varmaa S">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://ruphakvarmaa.github.io/ruphak-portfolio/">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ruphak Varmaa S">
+  <meta property="og:title" content="Ruphak Varmaa S — Software Engineering Student">
+  <meta property="og:description" content="Computer Science undergraduate in India. Full-stack web and cloud. Projects, skills, experience and contact.">
+  <meta property="og:url" content="https://ruphakvarmaa.github.io/ruphak-portfolio/">
+  <meta property="og:image" content="https://ruphakvarmaa.github.io/ruphak-portfolio/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ruphak Varmaa S — Software Engineering Student, Full-Stack and Cloud">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ruphak Varmaa S — Software Engineering Student">
+  <meta name="twitter:description" content="Computer Science undergraduate in India. Full-stack web and cloud. Projects, skills, experience and contact.">
+  <meta name="twitter:image" content="https://ruphakvarmaa.github.io/ruphak-portfolio/assets/img/og.png">
+  <meta name="twitter:image:alt" content="Ruphak Varmaa S — Software Engineering Student, Full-Stack and Cloud">
 
-  <!-- Fnts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>
+    // Progressive enhancement: hidden-initial motion states only apply under html.js.
+    // Failsafe: if main.js never boots, drop the class so nothing stays hidden.
+    (function (d) {
+      d.classList.add('js');
+      setTimeout(function () { if (!window.__rvReady) d.classList.remove('js'); }, 4000);
+    })(document.documentElement);
+  </script>
+  <script src="assets/js/main.js" defer></script>
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio (Customized)
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Customized for Ruphak Varmaa S
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ruphak Varmaa S",
+    "url": "https://ruphakvarmaa.github.io/ruphak-portfolio/",
+    "email": "mailto:ruphak2022@gmail.com",
+    "jobTitle": "Software Engineering Student",
+    "description": "Computer Science undergraduate building full-stack web apps and learning cloud fundamentals.",
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+    "sameAs": [
+      "https://github.com/RuphakVarmaa",
+      "https://www.linkedin.com/in/ruphakvarmaa"
+    ],
+    "knowsAbout": [
+      "Java", "JavaScript", "React", "Node.js", "Express", "Python", "SQL", "MongoDB",
+      "Git", "GitHub", "AWS", "Azure", "Data Structures and Algorithms", "REST APIs", "Linux"
+    ]
+  }
+  </script>
 </head>
 
-<body class="index-page">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ======= Sidebar Header ======= -->
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list" aria-label="Open menu"></i>
+  <!-- ===================== Navigation ===================== -->
+  <header class="nav" data-nav-bar>
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Ruphak Varmaa S — back to top">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <circle cx="32" cy="32" r="30.5" class="brand-ring"/>
+          <path class="mono-glyph" d="M14 45V19h8.6a7 7 0 0 1 0 14H14m8.2 0l5.8 12M35 19l7.5 26 7.5-26"/>
+        </svg>
+        <span class="brand-name">Ruphak Varmaa S</span>
+      </a>
 
-    <div class="profile-img">
-      <!-- Replace this file with your real photo -->
-      <img src="assets/img/my-profile-img.jpg" alt="Photo of Ruphak Varmaa S" class="img-fluid rounded-circle">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+        <ul class="nav-links">
+          <li style="--i:0"><a href="#about" data-nav-link="about">About</a></li>
+          <li style="--i:1"><a href="#skills" data-nav-link="skills">Skills</a></li>
+          <li style="--i:2"><a href="#projects" data-nav-link="projects">Projects</a></li>
+          <li style="--i:3"><a href="#experience" data-nav-link="experience">Experience</a></li>
+          <li style="--i:4"><a href="#contact" data-nav-link="contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <a href="#hero" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">RUPHAK VARMAA S</h1>
-    </a>
-
-    <div class="social-links text-center">
-      
-      <a href="#" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="github" aria-label="GitHub"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/ruphakvarmaa" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i> <span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> <span>About</span></a></li>
-        <li><a href="#skills"><i class="bi bi-lightning-charge navicon"></i> <span>Skills</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> <span>Projects</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav>
   </header>
-  <!-- End Sidebar Header -->
 
-  <main class="main">
+  <main id="main" tabindex="-1">
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+    <!-- ===================== Hero ===================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title" data-track data-track-start="0" data-track-end="0">
+      <div class="hero-glow" aria-hidden="true"></div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>RUPHAK VARMAA S</h2>
-        <p>I'm a
-          <span class="typed"
-            data-typed-items="CSE UnderGrad,Full-Stack Developer,Devops Specialist,Open-Source Contributor">
-            Software Engineer
-          </span>
-        </p>
-        <div class="mt-3">
-          <a href="#contact" class="btn btn-primary btn-sm me-2"><i class="bi bi-send"></i> Hire Me</a>
-          <a href="#portfolio" class="btn btn-outline-light btn-sm"><i class="bi bi-card-image"></i> See Projects</a>
+      <div class="hero-stage">
+        <div class="hero-avatar enter" style="--i:0">
+          <div class="avatar" data-photo="assets/img/profile.jpg">
+            <svg class="avatar-mono" viewBox="0 0 140 140" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="ring-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" class="ring-stop-a"/>
+                  <stop offset="1" class="ring-stop-b"/>
+                </linearGradient>
+                <radialGradient id="disc-grad" cx=".5" cy=".3" r=".8">
+                  <stop offset="0" class="disc-stop-a"/>
+                  <stop offset="1" class="disc-stop-b"/>
+                </radialGradient>
+              </defs>
+              <circle cx="70" cy="70" r="68" class="avatar-track"/>
+              <circle cx="70" cy="70" r="68" class="avatar-ring" pathLength="1" stroke="url(#ring-grad)"/>
+              <circle cx="70" cy="70" r="61" fill="url(#disc-grad)"/>
+              <path class="mono-glyph avatar-glyph" transform="translate(28 28) scale(1.3125)" d="M14 45V19h8.6a7 7 0 0 1 0 14H14m8.2 0l5.8 12M35 19l7.5 26 7.5-26"/>
+            </svg>
+          </div>
+        </div>
+
+        <p class="hero-eyebrow enter" style="--i:1">Computer Science undergraduate · India</p>
+
+        <h1 class="hero-name enter" id="hero-title" style="--i:2">Ruphak Varmaa S</h1>
+
+        <div class="hero-meta">
+          <p class="hero-role enter" style="--i:3">
+            <span class="sr-only">I’m a CSE UnderGrad, Full-Stack Developer, Devops Specialist and Open-Source Contributor.</span>
+            <span class="role-line" aria-hidden="true">
+              <span class="role-prefix">I’m</span>
+              <span class="rot" data-rotator>
+                <span class="rot-item is-active"><span class="rot-art">a</span> CSE UnderGrad</span>
+                <span class="rot-item"><span class="rot-art">a</span> Full-Stack Developer</span>
+                <span class="rot-item"><span class="rot-art">a</span> Devops Specialist</span>
+                <span class="rot-item"><span class="rot-art">an</span> Open-Source Contributor</span>
+              </span>
+            </span>
+          </p>
+          <p class="hero-sub enter" style="--i:4"><span class="nb">Software Engineering Student</span> • <span class="nb">Full-Stack &amp; Cloud</span></p>
+
+          <div class="hero-cta enter" style="--i:5">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="link-more" href="#projects">See projects <span aria-hidden="true">›</span></a>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- End Hero -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p class="mb-0">
+      <div class="hero-foot container">
+        <p class="scroll-cue" aria-hidden="true">Scroll<svg viewBox="0 0 16 16" focusable="false"><path d="M4 6.5l4 4 4-4"/></svg></p>
+        <p class="hero-status"><span class="status-dot" aria-hidden="true"></span>Looking for internships &amp; project collabs</p>
+      </div>
+    </section>
+
+    <!-- ===================== About / statement ===================== -->
+    <section class="statement" id="about" aria-labelledby="about-title" data-nav-section="about">
+      <div class="container">
+        <h2 class="eyebrow" id="about-title" data-reveal>About</h2>
+
+        <p class="statement-text" data-statement data-track data-track-start=".88" data-track-end=".5">
           I’m <strong>Ruphak Varmaa S</strong>, a <strong>20-year-old Computer Science undergraduate</strong> from India.
           I enjoy building clean, reliable software—mostly web apps—and I’m currently focused on
-          <em>data structures & algorithms</em> and <em>cloud fundamentals (AWS/Azure)</em>.
+          <em>data structures &amp; algorithms</em> and <em>cloud fundamentals (AWS/Azure)</em>.
           I learn by shipping: hackathon prototypes, course projects, and small tools that solve real problems.
         </p>
-      </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid rounded-3" alt="Ruphak profile">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Software Engineering Student • Full-Stack &amp; Cloud</h2>
-            <p class="fst-italic py-3">
-              Quick with docs, quicker with VS Code. I like shipping minimal, working versions and iterating fast.
-            </p>
-
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>7708358305</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>India</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="#" target="_blank" rel="noopener">Add your site / GitHub Pages</a></span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:rupphak2022@gmail.com">rupphak2022@gmail.com</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span><a href="https://www.linkedin.com/in/ruphakvarmaa" target="_blank" rel="noopener">linkedin.com/in/ruphakvarmaa</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Open to part-time</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Looking for:</strong> <span>Internships &amp; project collabs</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <p class="py-3 mb-0">
-              Outside code: reading docs, tinkering with cloud labs, and learning by contributing to open source.
-              If you have something cool to build, <a href="#contact">reach out.</a>
-            </p>
-          </div>
+        <div class="statement-foot">
+          <blockquote class="pull" data-reveal style="--i:0">
+            <p>“Quick with docs, quicker with VS Code. I like shipping minimal, working versions and iterating fast.”</p>
+          </blockquote>
+          <p class="outside" data-reveal style="--i:1">
+            Outside code: reading docs, tinkering with cloud labs, and learning by contributing to open source.
+            If you have something cool to build, <a class="text-link" href="#contact">reach out.</a>
+          </p>
         </div>
       </div>
     </section>
-    <!-- End About -->
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p class="mb-0">Core tech I use regularly. Percentages are comfort levels, not fluff.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row skills-content skills-animation">
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill"><span> Java </span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="85"></div></div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript (ES6+)</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="75"></div></div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>React</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="70"></div></div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Node.js / Express</span> <i class="val">65%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="65"></div></div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="70"></div></div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>SQL / MongoDB</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="60"></div></div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Git &amp; GitHub</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="80"></div></div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>AWS / Azure Fundamentals</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap"><div class="progress-bar" role="progressbar" aria-valuenow="50"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-12">
-            <ul class="list-inline small mb-0">
-              <li class="list-inline-item"><i class="bi bi-check2-circle"></i> DSA (LeetCode/Codeforces basics)</li>
-              <li class="list-inline-item"><i class="bi bi-check2-circle"></i> REST APIs</li>
-              <li class="list-inline-item"><i class="bi bi-check2-circle"></i> Bootstrap / Tailwind</li>
-              <li class="list-inline-item"><i class="bi bi-check2-circle"></i> Linux &amp; CLI</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Skills -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p class="mb-0">Snapshot of education, experience, and work I’m proud of. For full details, see <a href="https://www.linkedin.com/in/ruphakvarmaa" target="_blank" rel="noopener">LinkedIn</a>.</p>
-      </div>
-
+    <!-- ===================== Facts (bento) ===================== -->
+    <section class="facts band" aria-labelledby="facts-title" data-nav-section="about">
       <div class="container">
-        <div class="row">
+        <header class="section-head" data-reveal>
+          <h2 class="headline" id="facts-title">At a glance. <span class="muted">Software engineering student, full-stack and cloud.</span></h2>
+        </header>
 
-          <!-- Left column -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Ruphak Varmaa S</h4>
-              <p><em>Computer Science undergrad (age 20) building full-stack web projects and learning cloud. I like turning ideas into simple, solid apps. Open to software engineering internships.</em></p>
-              <ul>
-                <li>India</li>
-                <li>7708358305</li>
-                <li><a href="mailto:rupphak2022@gmail.com">ruphak2022@gmail.com</a></li>
-              </ul>
-            </div>
+        <ul class="bento">
+          <li class="tile tile-age" data-reveal style="--i:0">
+            <p class="tile-label">Age</p>
+            <p class="tile-giant" aria-hidden="true">20</p>
+            <p class="tile-caption"><span class="sr-only">20 </span>Years old</p>
+          </li>
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>B.E./B.Tech — Computer Science &amp; Engineering</h4>
-              <h5>2023 – 2027 (expected)</h5>
-              <p><em>Your University, India</em></p>
-              <ul>
-                <li>Coursework: DSA, OOP, DBMS, OS, CN, Web Development</li>
-                <li>Clubs/Hackathons: Coding club participation, project showcases</li>
-              </ul>
-            </div>
+          <li class="tile tile-strengths" data-reveal style="--i:1">
+            <p class="tile-label">Strengths</p>
+            <ol class="strengths">
+              <li><span class="idx" aria-hidden="true">01</span>Rapid prototyping, clean code, readable commits</li>
+              <li><span class="idx" aria-hidden="true">02</span>Comfort with docs; pick up new stacks quickly</li>
+              <li><span class="idx" aria-hidden="true">03</span>Clear communication and reliable execution</li>
+            </ol>
+          </li>
 
-            <div class="resume-item">
-              <h4>High School (Science)</h4>
-              <h5>Completed</h5>
-              <p><em>Your School, India</em></p>
-              <p>Focused on mathematics &amp; fundamentals that power my CS journey.</p>
-            </div>
+          <li class="tile tile-loc" data-reveal style="--i:2">
+            <p class="tile-label">Based in</p>
+            <p class="tile-value">India</p>
+          </li>
 
-            <h3 class="resume-title">Selected Projects</h3>
-            <div class="resume-item">
-              <h4>CivicEye — Civic Issue Tracker</h4>
-              <h5>2024</h5>
-              <ul>
-                <li>Full-stack prototype to report and track civic issues (potholes, lights, etc.)</li>
-                <li>Built with Node/Express + MongoDB; responsive UI with Bootstrap</li>
-                <li>Role: full-stack, auth, REST endpoints, basic admin dashboard</li>
-              </ul>
-            </div>
+          <li class="tile tile-edu" data-reveal style="--i:3">
+            <p class="tile-label">B.E./B.Tech CSE</p>
+            <p class="tile-value num">2023–2027</p>
+          </li>
 
-            <div class="resume-item">
-              <h4>Garment Source — Product Catalog</h4>
-              <h5>2024</h5>
-              <ul>
-                <li>Static catalog + contact flow for a small garment business</li>
-                <li>Optimized images and structured data for better SEO</li>
-              </ul>
-            </div>
+          <li class="tile tile-open" data-reveal style="--i:4">
+            <p class="tile-label">Open to</p>
+            <p class="tile-value">Internships &amp; project collabs</p>
+          </li>
 
-            <div class="resume-item">
-              <h4>Portfolio Site (This)</h4>
-              <h5>2024</h5>
-              <ul>
-                <li>Customized Bootstrap template, content, and a clean project gallery</li>
-                <li>Deployed on GitHub Pages (or Netlify/Vercel)</li>
-              </ul>
-            </div>
-          </div>
+          <li class="tile tile-free" data-reveal style="--i:5">
+            <p class="tile-label">Freelance</p>
+            <p class="tile-value">Part-time</p>
+          </li>
 
-          <!-- Right column -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Experience</h3>
+          <li class="tile tile-now" data-reveal style="--i:6">
+            <p class="tile-label"><span class="live-dot" aria-hidden="true"></span>Now learning</p>
+            <p class="tile-value">DSA + AWS/Azure</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-            <!-- If you have real LinkedIn roles, replace these items with exact titles/dates/bullets -->
-            <div class="resume-item">
-              <h4>Software Developer Intern (Project-based)</h4>
-              <h5>2024</h5>
-              <p><em>Remote / Student Project Collaboration</em></p>
-              <ul>
+    <!-- ===================== Skills ===================== -->
+    <section class="skills" id="skills" aria-labelledby="skills-title" data-nav-section="skills">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <h2 class="headline" id="skills-title">Skills. <span class="muted">Core tech I use regularly.</span></h2>
+          <p class="lede">Percentages are comfort levels, not fluff.</p>
+        </header>
+
+        <ol class="ledger" aria-label="Skills by comfort level">
+          <li class="skill" data-reveal style="--i:0;--v:.90"><span class="skill-name">Python</span><span class="meter" aria-hidden="true"><i></i></span><span class="skill-val num">90%</span></li>
+          <li class="skill" data-reveal style="--i:1;--v:.85"><span class="skill-name">Java</span><span class="meter" aria-hidden="true"><i></i></span><span class="skill-val num">85%</span></li>
+          <li class="skill" data-reveal style="--i:2;--v:.80"><span class="skill-name">Git &amp; GitHub</span><span class="meter" aria-hidden="true"><i></i></span><span class="skill-val num">80%</span></li>
+          <li class="skill" data-reveal style="--i:3;--v:.75"><span class="skill-name">JavaScript (ES6+)</span><span class="meter" aria-hidden="true"><i></i></span><span class="skill-val num">75%</span></li>
+          <li class="skill" data-reveal style="--i:4;--v:.70"><span class="skill-name">React</span><span class="meter" aria-hidden="true"><i></i></span><span class="skill-val num">70%</span></li>
+          <li class="skill" data-reveal style="--i:5;--v:.65"><span class="skill-name">Node.js / Express</span><span class="meter" aria-hidden="true"><i></i></span><span class="skill-val num">65%</span></li>
+          <li class="skill" data-reveal style="--i:6;--v:.60"><span class="skill-name">SQL / MongoDB</span><span class="meter" aria-hidden="true"><i></i></span><span class="skill-val num">60%</span></li>
+          <li class="skill" data-reveal style="--i:7;--v:.60"><span class="skill-name">AWS / Azure Fundamentals</span><span class="meter" aria-hidden="true"><i></i></span><span class="skill-val num">60%</span></li>
+        </ol>
+
+        <div class="also" data-reveal>
+          <h3 class="also-label">Also comfortable with</h3>
+          <ul class="tags">
+            <li class="tag">DSA (LeetCode/Codeforces basics)</li>
+            <li class="tag">REST APIs</li>
+            <li class="tag">Bootstrap / Tailwind</li>
+            <li class="tag">Linux &amp; CLI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Projects (pinned horizontal gallery) ===================== -->
+    <section class="gallery band" id="projects" aria-labelledby="projects-title" data-nav-section="projects" data-gallery>
+      <div class="gallery-pin">
+        <div class="container gallery-head">
+          <h2 class="headline" id="projects-title" data-reveal>Projects. <span class="muted">Real work I’ve shipped.</span></h2>
+          <p class="gallery-count num" aria-hidden="true"><span data-count>01</span><span class="of"> / 06</span></p>
+          <div class="gallery-progress" aria-hidden="true"><i data-progress></i></div>
+        </div>
+
+        <ol class="gallery-track" style="--n:6">
+
+          <!-- 1. CivicEye -->
+          <li class="project" data-reveal style="--i:0;--pi:0">
+            <article class="card" aria-labelledby="p1-title">
+              <div class="art art-civic" aria-hidden="true">
+                <div class="art-stage">
+                  <svg class="art-svg" viewBox="0 0 480 360" focusable="false">
+                    <defs>
+                      <pattern id="civ-dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="1.25" class="a-dot"/></pattern>
+                      <clipPath id="civ-clip"><rect x="56" y="34" width="368" height="276" rx="22"/></clipPath>
+                    </defs>
+                    <rect x="56" y="34" width="368" height="276" rx="22" class="a-win"/>
+                    <g clip-path="url(#civ-clip)">
+                      <rect x="56" y="34" width="368" height="276" fill="url(#civ-dots)"/>
+                      <path d="M30 232C140 198 236 266 450 204" class="a-road"/>
+                      <path d="M190 10C214 120 168 222 240 340" class="a-road"/>
+                      <path d="M300 10C318 86 380 122 450 116" class="a-road a-road-s"/>
+                      <circle cx="318" cy="234" r="34" class="a-zone"/>
+                    </g>
+                    <rect x="56.5" y="34.5" width="367" height="275" rx="21.5" class="a-outline"/>
+                    <g transform="translate(150 176)"><g class="pin" style="--d:0">
+                      <circle r="14" class="pin-pulse warn"/>
+                      <path d="M0 0C-7-9-11-14-11-20a11 11 0 1 1 22 0c0 6-4 11-11 20z" class="pin-body warn"/>
+                      <circle cy="-20" r="4" class="pin-eye"/>
+                    </g></g>
+                    <g transform="translate(296 124)"><g class="pin" style="--d:1">
+                      <path d="M0 0C-7-9-11-14-11-20a11 11 0 1 1 22 0c0 6-4 11-11 20z" class="pin-body pa"/>
+                      <circle cy="-20" r="4" class="pin-eye"/>
+                    </g></g>
+                    <g transform="translate(318 234)"><g class="pin" style="--d:2">
+                      <circle r="14" class="pin-pulse ok"/>
+                      <path d="M0 0C-7-9-11-14-11-20a11 11 0 1 1 22 0c0 6-4 11-11 20z" class="pin-body ok"/>
+                      <circle cy="-20" r="4" class="pin-eye"/>
+                    </g></g>
+                    <g transform="translate(240 310)" class="status">
+                      <rect x="-108" y="-20" width="216" height="40" rx="20" class="a-chip"/>
+                      <circle cx="-86" cy="0" r="4.5" class="warn-fill"/>
+                      <text x="-75" y="4.6" class="a-t a-t-sm">Reported</text>
+                      <path d="M-8 0h14m-4.5-4.5L6 0l-4.5 4.5" class="a-arrow"/>
+                      <circle cx="22" cy="0" r="4.5" class="ok-fill"/>
+                      <text x="33" y="4.6" class="a-t a-t-sm">Resolved</text>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-kicker"><span class="num" aria-hidden="true">01</span>Civic issue tracker · 2024</p>
+                <h3 class="card-title" id="p1-title">CivicEye</h3>
+                <p class="card-line">Civic issue reporting &amp; tracking (Node/Express/MongoDB)</p>
+                <ul class="card-points">
+                  <li>Full-stack prototype to report and track civic issues (potholes, lights, etc.)</li>
+                  <li>Built with Node/Express + MongoDB; responsive UI with Bootstrap</li>
+                  <li>Role: full-stack, auth, REST endpoints, basic admin dashboard</li>
+                </ul>
+                <p class="card-stack"><span class="sr-only">Stack: </span>Node.js · Express · MongoDB · Bootstrap</p>
+                <a class="card-link" href="https://github.com/RuphakVarmaa" target="_blank" rel="noopener">View on GitHub<span class="sr-only">: CivicEye (opens in a new tab)</span><svg class="i-ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+              </div>
+            </article>
+          </li>
+
+          <!-- 2. Garment Source -->
+          <li class="project" data-reveal style="--i:1;--pi:1">
+            <article class="card" aria-labelledby="p2-title">
+              <div class="art art-garment" aria-hidden="true">
+                <div class="art-stage">
+                  <svg class="art-svg" viewBox="0 0 480 360" focusable="false">
+                    <defs>
+                      <path id="tee" d="M-8-17l-12 6-5 10 8 4 3-5V18h28V-2l3 5 8-4-5-10-12-6c-2 5-6 7-8 7s-6-2-8-7z"/>
+                    </defs>
+                    <rect x="48" y="30" width="384" height="300" rx="20" class="a-win"/>
+                    <rect x="48.5" y="30.5" width="383" height="299" rx="19.5" class="a-outline"/>
+                    <text x="72" y="66" class="a-t a-t-brand">Garment Source</text>
+                    <rect x="262" y="57" width="34" height="6" rx="3" class="a-bar"/>
+                    <rect x="306" y="57" width="34" height="6" rx="3" class="a-bar"/>
+                    <rect x="352" y="48" width="56" height="24" rx="12" class="a-pill-o"/>
+                    <text x="380" y="64" text-anchor="middle" class="a-t a-t-xs">Contact</text>
+                    <g class="tiles">
+                      <g class="tile-g" style="--d:0"><rect x="72" y="88" width="104" height="80" rx="12" class="sw sw1"/><use href="#tee" x="124" y="128" class="tee"/><rect x="72" y="178" width="66" height="6" rx="3" class="a-bar-2"/><rect x="72" y="190" width="34" height="6" rx="3" class="a-bar"/></g>
+                      <g class="tile-g" style="--d:1"><rect x="188" y="88" width="104" height="80" rx="12" class="sw sw2"/><use href="#tee" x="240" y="128" class="tee"/><rect x="188" y="178" width="58" height="6" rx="3" class="a-bar-2"/><rect x="188" y="190" width="30" height="6" rx="3" class="a-bar"/></g>
+                      <g class="tile-g" style="--d:2"><rect x="304" y="88" width="104" height="80" rx="12" class="sw sw3"/><use href="#tee" x="356" y="128" class="tee"/><rect x="304" y="178" width="72" height="6" rx="3" class="a-bar-2"/><rect x="304" y="190" width="36" height="6" rx="3" class="a-bar"/></g>
+                      <g class="tile-g" style="--d:3"><rect x="72" y="210" width="104" height="80" rx="12" class="sw sw4"/><use href="#tee" x="124" y="250" class="tee"/><rect x="72" y="300" width="60" height="6" rx="3" class="a-bar-2"/><rect x="72" y="312" width="32" height="6" rx="3" class="a-bar"/></g>
+                      <g class="tile-g" style="--d:4"><rect x="188" y="210" width="104" height="80" rx="12" class="sw sw5"/><use href="#tee" x="240" y="250" class="tee tee-l"/><rect x="188" y="300" width="70" height="6" rx="3" class="a-bar-2"/><rect x="188" y="312" width="34" height="6" rx="3" class="a-bar"/></g>
+                      <g class="tile-g" style="--d:5"><rect x="304" y="210" width="104" height="80" rx="12" class="sw sw6"/><use href="#tee" x="356" y="250" class="tee"/><rect x="304" y="300" width="56" height="6" rx="3" class="a-bar-2"/><rect x="304" y="312" width="30" height="6" rx="3" class="a-bar"/></g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-kicker"><span class="num" aria-hidden="true">02</span>Product catalog · 2024</p>
+                <h3 class="card-title" id="p2-title">Garment Source</h3>
+                <p class="card-line">Small business catalog site with contact flow</p>
+                <ul class="card-points">
+                  <li>Static catalog + contact flow for a small garment business</li>
+                  <li>Optimized images and structured data for better SEO</li>
+                </ul>
+                <p class="card-stack"><span class="sr-only">Stack: </span>Static site · SEO · Structured data</p>
+                <a class="card-link" href="https://github.com/RuphakVarmaa" target="_blank" rel="noopener">View on GitHub<span class="sr-only">: Garment Source (opens in a new tab)</span><svg class="i-ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+              </div>
+            </article>
+          </li>
+
+          <!-- 3. Personal Portfolio -->
+          <li class="project" data-reveal style="--i:2;--pi:2">
+            <article class="card" aria-labelledby="p3-title">
+              <div class="art art-folio" aria-hidden="true">
+                <div class="art-stage">
+                  <svg class="art-svg" viewBox="0 0 480 360" focusable="false">
+                    <defs>
+                      <linearGradient id="folio-ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="ring-stop-a"/><stop offset="1" class="ring-stop-b"/></linearGradient>
+                      <radialGradient id="folio-glow" cx=".5" cy=".35" r=".55"><stop offset="0" class="glow-stop-a"/><stop offset="1" class="glow-stop-b"/></radialGradient>
+                    </defs>
+                    <rect x="48" y="32" width="384" height="296" rx="18" class="a-win"/>
+                    <rect x="48" y="80" width="384" height="248" fill="url(#folio-glow)"/>
+                    <rect x="48.5" y="32.5" width="383" height="295" rx="17.5" class="a-outline"/>
+                    <circle cx="72" cy="56" r="5" class="tl tl-r"/><circle cx="89" cy="56" r="5" class="tl tl-y"/><circle cx="106" cy="56" r="5" class="tl tl-g"/>
+                    <rect x="158" y="45" width="164" height="22" rx="11" class="a-fill-2"/>
+                    <text x="240" y="60" text-anchor="middle" class="a-t a-t-xs a-t-2">ruphakvarmaa.github.io</text>
+                    <path d="M48 80h384" class="a-hair"/>
+                    <g class="folio-hero">
+                      <circle cx="240" cy="128" r="23" class="a-fill-2"/>
+                      <circle cx="240" cy="128" r="26" class="folio-ring" stroke="url(#folio-ring)"/>
+                      <path class="mono-glyph folio-glyph" transform="translate(222 110) scale(.5625)" d="M14 45V19h8.6a7 7 0 0 1 0 14H14m8.2 0l5.8 12M35 19l7.5 26 7.5-26"/>
+                      <text x="240" y="190" text-anchor="middle" class="a-t folio-name">Ruphak Varmaa S</text>
+                      <rect x="178" y="204" width="124" height="7" rx="3.5" class="a-bar"/>
+                      <rect x="186" y="222" width="60" height="22" rx="11" class="a-accent"/>
+                      <rect x="256" y="229.5" width="38" height="7" rx="3.5" class="a-accent-soft"/>
+                    </g>
+                    <rect x="72" y="262" width="104" height="44" rx="10" class="a-fill-2"/>
+                    <rect x="188" y="262" width="104" height="44" rx="10" class="a-fill-2"/>
+                    <rect x="304" y="262" width="104" height="44" rx="10" class="a-fill-2"/>
+                    <text x="86" y="290" class="a-t folio-num">20</text>
+                    <rect x="202" y="279" width="54" height="7" rx="3.5" class="a-bar"/>
+                    <rect x="318" y="279" width="64" height="7" rx="3.5" class="a-bar"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-kicker"><span class="num" aria-hidden="true">03</span>This site</p>
+                <h3 class="card-title" id="p3-title">Personal Portfolio</h3>
+                <p class="card-line">Hand-built, zero-dependency HTML/CSS/JS.</p>
+                <ul class="card-points">
+                  <li>Rebuilt from scratch: no framework, no build step, no external requests</li>
+                  <li>Scroll-driven motion that respects reduced-motion settings</li>
+                  <li>Deployed on GitHub Pages</li>
+                </ul>
+                <p class="card-stack"><span class="sr-only">Stack: </span>HTML · CSS · JavaScript</p>
+                <a class="card-link" href="https://github.com/RuphakVarmaa" target="_blank" rel="noopener">View on GitHub<span class="sr-only">: Personal Portfolio (opens in a new tab)</span><svg class="i-ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+              </div>
+            </article>
+          </li>
+
+          <!-- 4. DSA Tracker -->
+          <li class="project" data-reveal style="--i:3;--pi:3">
+            <article class="card" aria-labelledby="p4-title">
+              <div class="art art-dsa" aria-hidden="true">
+                <div class="art-stage">
+                  <svg class="art-svg" viewBox="0 0 480 360" focusable="false">
+                    <rect x="40" y="34" width="400" height="292" rx="20" class="a-win"/>
+                    <rect x="40.5" y="34.5" width="399" height="291" rx="19.5" class="a-outline"/>
+                    <text x="64" y="72" class="a-t a-t-h">Today</text>
+                    <text x="258" y="72" text-anchor="end" class="a-t a-t-xs a-t-2">3 of 5</text>
+                    <g class="check" style="--d:0" transform="translate(73 104)"><circle r="9" class="pa-fill"/><path d="M-4 .5l2.6 2.6L4.2-3" class="tick"/></g>
+                    <text x="92" y="108.5" class="a-t a-t-sm a-t-2 done">Two Sum</text>
+                    <rect x="220" y="94" width="38" height="20" rx="10" class="lvl lvl-e"/><text x="239" y="107.8" text-anchor="middle" class="a-t a-t-xs lvl-t-e">Easy</text>
+                    <g class="check" style="--d:1" transform="translate(73 140)"><circle r="9" class="pa-fill"/><path d="M-4 .5l2.6 2.6L4.2-3" class="tick"/></g>
+                    <text x="92" y="144.5" class="a-t a-t-sm a-t-2 done">Binary Search</text>
+                    <rect x="220" y="130" width="38" height="20" rx="10" class="lvl lvl-e"/><text x="239" y="143.8" text-anchor="middle" class="a-t a-t-xs lvl-t-e">Easy</text>
+                    <g class="check" style="--d:2" transform="translate(73 176)"><circle r="9" class="pa-fill"/><path d="M-4 .5l2.6 2.6L4.2-3" class="tick"/></g>
+                    <text x="92" y="180.5" class="a-t a-t-sm a-t-2 done">Merge Intervals</text>
+                    <rect x="202" y="166" width="56" height="20" rx="10" class="lvl lvl-m"/><text x="230" y="179.8" text-anchor="middle" class="a-t a-t-xs lvl-t-m">Medium</text>
+                    <circle cx="73" cy="212" r="8.25" class="a-ring"/>
+                    <text x="92" y="216.5" class="a-t a-t-sm">Graphs · BFS</text>
+                    <rect x="202" y="202" width="56" height="20" rx="10" class="lvl lvl-m"/><text x="230" y="215.8" text-anchor="middle" class="a-t a-t-xs lvl-t-m">Medium</text>
+                    <circle cx="73" cy="248" r="8.25" class="a-ring"/>
+                    <text x="92" y="252.5" class="a-t a-t-sm">LRU Cache</text>
+                    <rect x="220" y="238" width="38" height="20" rx="10" class="lvl lvl-h"/><text x="239" y="251.8" text-anchor="middle" class="a-t a-t-xs lvl-t-h">Hard</text>
+                    <rect x="64" y="282" width="194" height="6" rx="3" class="a-bar"/>
+                    <rect x="64" y="282" width="116" height="6" rx="3" class="pa-fill prog"/>
+                    <path d="M278 58v244" class="a-hair"/>
+                    <text x="298" y="72" class="a-t a-t-h">Streak</text>
+                    <text x="420" y="72" text-anchor="end" class="a-t a-t-xs a-t-2">7 days</text>
+                    <g class="bars">
+                      <rect x="298" y="226" width="12" height="44" rx="4" class="bar pa-soft" style="--d:0"/>
+                      <rect x="316" y="200" width="12" height="70" rx="4" class="bar pa-soft" style="--d:1"/>
+                      <rect x="334" y="212" width="12" height="58" rx="4" class="bar pa-soft" style="--d:2"/>
+                      <rect x="352" y="176" width="12" height="94" rx="4" class="bar pa-soft" style="--d:3"/>
+                      <rect x="370" y="190" width="12" height="80" rx="4" class="bar pa-soft" style="--d:4"/>
+                      <rect x="388" y="154" width="12" height="116" rx="4" class="bar pa-soft" style="--d:5"/>
+                      <rect x="406" y="128" width="12" height="142" rx="4" class="bar pa-fill" style="--d:6"/>
+                    </g>
+                    <path d="M296 270.5h124" class="a-hair"/>
+                    <g class="a-t a-t-xs a-t-2" text-anchor="middle">
+                      <text x="304" y="292">M</text><text x="322" y="292">T</text><text x="340" y="292">W</text><text x="358" y="292">T</text><text x="376" y="292">F</text><text x="394" y="292">S</text><text x="412" y="292">S</text>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-kicker"><span class="num" aria-hidden="true">04</span>Practice tool</p>
+                <h3 class="card-title" id="p4-title">DSA Tracker</h3>
+                <p class="card-line">Lightweight tracker for practice &amp; notes</p>
+                <p class="card-stack"><span class="sr-only">Topics: </span>DSA · Practice · Notes</p>
+                <a class="card-link" href="https://github.com/RuphakVarmaa" target="_blank" rel="noopener">View on GitHub<span class="sr-only">: DSA Tracker (opens in a new tab)</span><svg class="i-ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+              </div>
+            </article>
+          </li>
+
+          <!-- 5. Utility Scripts -->
+          <li class="project" data-reveal style="--i:4;--pi:4">
+            <article class="card" aria-labelledby="p5-title">
+              <div class="art art-term" aria-hidden="true">
+                <div class="art-stage">
+                  <svg class="art-svg" viewBox="0 0 480 360" focusable="false">
+                    <rect x="48" y="46" width="384" height="268" rx="16" class="term"/>
+                    <rect x="48.5" y="46.5" width="383" height="267" rx="15.5" class="term-edge"/>
+                    <circle cx="72" cy="70" r="5" class="term-dot"/><circle cx="89" cy="70" r="5" class="term-dot"/><circle cx="106" cy="70" r="5" class="term-dot"/>
+                    <text x="240" y="74.5" text-anchor="middle" class="t-title">tidy — zsh</text>
+                    <path d="M48 92h384" class="term-hair"/>
+                    <text x="72" y="130" class="t-mono"><tspan class="t-prompt">$</tspan> python tidy.py</text>
+                    <text x="72" y="158" class="t-mono t-out">→ scanning 214 files</text>
+                    <path d="M73 180.5l3.5 3.5 7-7.5" class="t-tick"/>
+                    <text x="94" y="186" class="t-mono">128 files sorted into folders</text>
+                    <path d="M73 206.5l3.5 3.5 7-7.5" class="t-tick"/>
+                    <text x="94" y="212" class="t-mono">24 duplicates removed</text>
+                    <text x="72" y="240" class="t-mono t-out">done in 0.8s</text>
+                    <text x="72" y="276" class="t-mono"><tspan class="t-prompt">$</tspan></text>
+                    <rect x="90" y="261" width="9" height="19" rx="1.5" class="caret"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-kicker"><span class="num" aria-hidden="true">05</span>Automation</p>
+                <h3 class="card-title" id="p5-title">Utility Scripts</h3>
+                <p class="card-line">Small Python/Node scripts that automate boring stuff</p>
+                <p class="card-stack"><span class="sr-only">Stack: </span>Python · Node.js</p>
+                <a class="card-link" href="https://github.com/RuphakVarmaa" target="_blank" rel="noopener">View on GitHub<span class="sr-only">: Utility Scripts (opens in a new tab)</span><svg class="i-ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+              </div>
+            </article>
+          </li>
+
+          <!-- 6. API Playground -->
+          <li class="project" data-reveal style="--i:5;--pi:5">
+            <article class="card" aria-labelledby="p6-title">
+              <div class="art art-api" aria-hidden="true">
+                <div class="art-stage">
+                  <svg class="art-svg" viewBox="0 0 480 360" focusable="false">
+                    <rect x="40" y="34" width="400" height="292" rx="20" class="a-win"/>
+                    <rect x="40.5" y="34.5" width="399" height="291" rx="19.5" class="a-outline"/>
+                    <rect x="62" y="56" width="356" height="42" rx="13" class="a-fill-2"/>
+                    <rect x="71" y="65" width="46" height="24" rx="8" class="get"/>
+                    <text x="94" y="81.5" text-anchor="middle" class="a-t a-t-xs get-t">GET</text>
+                    <text x="129" y="82" class="t-mono a-code">/api/users</text>
+                    <rect x="350" y="65" width="58" height="24" rx="12" class="a-accent"/>
+                    <text x="379" y="81.5" text-anchor="middle" class="a-t a-t-xs on-accent">Send</text>
+                    <text x="64" y="134" class="a-t a-t-sm a-t-2">Response</text>
+                    <g class="ok-badge">
+                      <rect x="336" y="118" width="80" height="24" rx="12" class="ok-bg"/>
+                      <circle cx="351" cy="130" r="3.5" class="ok-fill"/>
+                      <text x="361" y="134.5" class="a-t a-t-xs ok-t">200 OK</text>
+                    </g>
+                    <path d="M62 154h356" class="a-hair"/>
+                    <g class="json">
+                      <text x="64" y="182" class="t-mono a-code-2">[ {</text>
+                      <text x="88" y="208" class="t-mono"><tspan class="k">"id"</tspan><tspan class="a-code-2">: </tspan><tspan class="v">1</tspan><tspan class="a-code-2">,</tspan></text>
+                      <text x="88" y="234" class="t-mono"><tspan class="k">"name"</tspan><tspan class="a-code-2">:</tspan></text>
+                      <rect x="160" y="224" width="112" height="12" rx="6" class="v-bar" style="--d:0"/>
+                      <text x="88" y="260" class="t-mono"><tspan class="k">"role"</tspan><tspan class="a-code-2">:</tspan></text>
+                      <rect x="160" y="250" width="76" height="12" rx="6" class="v-bar" style="--d:1"/>
+                      <text x="88" y="286" class="t-mono"><tspan class="k">"active"</tspan><tspan class="a-code-2">: </tspan><tspan class="v">true</tspan></text>
+                      <text x="64" y="310" class="t-mono a-code-2">} ]</text>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-kicker"><span class="num" aria-hidden="true">06</span>Backend experiments</p>
+                <h3 class="card-title" id="p6-title">API Playground</h3>
+                <p class="card-line">REST experiments, auth, and integrations</p>
+                <p class="card-stack"><span class="sr-only">Topics: </span>REST · Auth · Integrations</p>
+                <a class="card-link" href="https://github.com/RuphakVarmaa" target="_blank" rel="noopener">View on GitHub<span class="sr-only">: API Playground (opens in a new tab)</span><svg class="i-ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== Experience ===================== -->
+    <section class="experience" id="experience" aria-labelledby="experience-title" data-nav-section="experience">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <h2 class="headline" id="experience-title">Experience. <span class="muted">Snapshot of education, experience, and work I’m proud of.</span></h2>
+          <p class="lede">For full details, see <a class="text-link" href="https://www.linkedin.com/in/ruphakvarmaa" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+        </header>
+
+        <ol class="timeline" data-timeline data-track data-track-start=".62" data-track-end=".62">
+          <li class="tl-item" data-reveal style="--i:0">
+            <p class="tl-when num">2024</p>
+            <span class="tl-node" aria-hidden="true"></span>
+            <div class="tl-body">
+              <h3 class="tl-title">Software Developer Intern (Project-based)</h3>
+              <p class="tl-where">Remote / Student Project Collaboration</p>
+              <ul class="tl-points">
                 <li>Implemented REST APIs and integrated MongoDB for CRUD flows</li>
                 <li>Wrote reusable UI components and improved accessibility</li>
                 <li>Used Git/GitHub for version control and PR reviews</li>
               </ul>
             </div>
-
-            <div class="resume-item">
-              <h4>Open-Source Contributions</h4>
-              <h5>2023 – Present</h5>
-              <p><em>GitHub</em></p>
-              <ul>
-                <li>Fixed documentation & small bugs across JS projects</li>
+          </li>
+          <li class="tl-item" data-reveal style="--i:0">
+            <p class="tl-when num">2023 – Present</p>
+            <span class="tl-node" aria-hidden="true"></span>
+            <div class="tl-body">
+              <h3 class="tl-title">Open-Source Contributions</h3>
+              <p class="tl-where">GitHub</p>
+              <ul class="tl-points">
+                <li>Fixed documentation &amp; small bugs across JS projects</li>
                 <li>Opened issues, created PRs, and learned maintainer workflows</li>
               </ul>
             </div>
-
-            <h3 class="resume-title">Strengths</h3>
-            <div class="resume-item">
-              <ul>
-                <li>Rapid prototyping, clean code, readable commits</li>
-                <li>Comfort with docs; pick up new stacks quickly</li>
-                <li>Clear communication and reliable execution</li>
+          </li>
+          <li class="tl-item" data-reveal style="--i:0">
+            <p class="tl-when num">2023 – 2027 <span class="tl-note">(expected)</span></p>
+            <span class="tl-node" aria-hidden="true"></span>
+            <div class="tl-body">
+              <h3 class="tl-title">B.E./B.Tech — Computer Science &amp; Engineering</h3>
+              <p class="tl-where">Education</p>
+              <ul class="tl-points">
+                <li>Coursework: DSA, OOP, DBMS, OS, CN, Web Development</li>
+                <li>Clubs/Hackathons: Coding club participation, project showcases</li>
               </ul>
             </div>
-
-            <h3 class="resume-title">Links</h3>
-            <div class="resume-item">
-              <ul>
-                <li><a href="https://www.linkedin.com/in/ruphakvarmaa" target="_blank" rel="noopener">linkedin.com/in/ruphakvarmaa</a></li>
-                <li><a href="#" target="_blank" rel="noopener">GitHub (add your profile)</a></li>
-                <li><a href="#" target="_blank" rel="noopener">Resume PDF (add link)</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
-    <!-- End Resume -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Projects</h2>
-        <p class="mb-0">Real work I’ve shipped. Replace preview images in <code>assets/img/portfolio/</code> with your own screenshots (same filenames or update the paths below).</p>
-      </div>
+    <!-- ===================== Contact ===================== -->
+    <section class="contact band" id="contact" aria-labelledby="contact-title" data-nav-section="contact">
+      <div class="container contact-inner">
+        <p class="eyebrow" data-reveal style="--i:0">Contact</p>
+        <h2 class="contact-title" id="contact-title" data-reveal style="--i:1">Let’s build something.</h2>
+        <p class="lede contact-lede" data-reveal style="--i:2">Best way to reach me is email or LinkedIn. I’m open to internships and collabs.</p>
 
-      <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-web">Web</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-other">Other</li>
-          </ul>
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <!-- CivicEye -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="CivicEye project screenshot">
-                <div class="portfolio-info">
-                  <h4>CivicEye</h4>
-                  <p>Civic issue reporting &amp; tracking (Node/Express/MongoDB)</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="CivicEye — full preview" data-gallery="portfolio-gallery-web" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Garment Source -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="Garment Source website screenshot">
-                <div class="portfolio-info">
-                  <h4>Garment Source</h4>
-                  <p>Small business catalog site with contact flow</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Garment Source — preview" data-gallery="portfolio-gallery-web" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Portfolio Site -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="Personal portfolio screenshot">
-                <div class="portfolio-info">
-                  <h4>Personal Portfolio</h4>
-                  <p>Customised Bootstrap portfolio &amp; deploy</p>
-                  <a href="assets/img/portfolio/branding-1.jpg" title="Portfolio — preview" data-gallery="portfolio-gallery-web" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Add more items as you build new projects -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-other">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="DSA practice tracker">
-                <div class="portfolio-info">
-                  <h4>DSA Tracker</h4>
-                  <p>Lightweight tracker for practice &amp; notes</p>
-                  <a href="assets/img/portfolio/books-1.jpg" title="DSA Tracker — preview" data-gallery="portfolio-gallery-other" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="Utility scripts preview">
-                <div class="portfolio-info">
-                  <h4>Utility Scripts</h4>
-                  <p>Small Python/Node scripts that automate boring stuff</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="Utility Scripts — preview" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="API playground">
-                <div class="portfolio-info">
-                  <h4>API Playground</h4>
-                  <p>REST experiments, auth, and integrations</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="API Playground — preview" data-gallery="portfolio-gallery-web" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- End Portfolio Container -->
+        <div class="email-row" data-reveal style="--i:3">
+          <a class="email" href="mailto:ruphak2022@gmail.com">ruphak2022@gmail.com</a>
+          <button class="copy" type="button" data-copy="ruphak2022@gmail.com">
+            <svg class="i-copy" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7" y="7" width="9.5" height="9.5" rx="2.5"/><path d="M13 4.6A2.5 2.5 0 0 0 10.6 3H6A3 3 0 0 0 3 6v4.6A2.5 2.5 0 0 0 4.6 13"/></svg>
+            <svg class="i-check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 10.5l3.2 3.2L15 7"/></svg>
+            <span class="copy-label">Copy email</span>
+          </button>
         </div>
+        <p class="copy-status" role="status" aria-live="polite" data-copy-status></p>
+
+        <ul class="contact-ledger" data-reveal style="--i:4">
+          <li><span class="ledger-k">Phone</span><a class="ledger-v num" href="tel:+917708358305">+91 77083 58305</a></li>
+          <li><span class="ledger-k">GitHub</span><a class="ledger-v" href="https://github.com/RuphakVarmaa" target="_blank" rel="noopener">github.com/RuphakVarmaa<span class="sr-only"> (opens in a new tab)</span><svg class="i-ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+          <li><span class="ledger-k">LinkedIn</span><a class="ledger-v" href="https://www.linkedin.com/in/ruphakvarmaa" target="_blank" rel="noopener">linkedin.com/in/ruphakvarmaa<span class="sr-only"> (opens in a new tab)</span><svg class="i-ext" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5"/></svg></a></li>
+        </ul>
       </div>
     </section>
-    <!-- End Portfolio -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p class="mb-0">Best way to reach me is email or LinkedIn. I’m open to internships and collabs.</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Location</h3>
-                  <p>India</p>
-                </div>
-              </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="250">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Phone</h3>
-                  <p>+917708358305</p>
-                </div>
-              </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email</h3>
-                  <p><a href="mailto:rupphak2022@gmail.com">ruphak2022@gmail.com</a></p>
-                </div>
-              </div>
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="350">
-                <i class="bi bi-linkedin flex-shrink-0"></i>
-                <div>
-                  <h3>LinkedIn</h3>
-                  <p><a href="https://www.linkedin.com/in/ruphakvarmaa" target="_blank" rel="noopener">linkedin.com/in/ruphakvarmaa</a></p>
-                </div>
-              </div>
-
-              <!-- Optional map: replace with your city if you want -->
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13133.686!2d77.5946!3d12.9716!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v0000000000000"
-                frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen=""
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Map">
-              </iframe>
-            </div>
-          </div>
-
-          <!-- Contact form (static demo) -->
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required>
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required>
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                  <button type="submit">Send Message</button>
-                </div>
-              </div>
-            </form>
-            <p class="small text-muted mt-2 mb-0">Note: the PHP handler is included with the original template. Configure it or connect your own backend to make this form live.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Contact -->
-
   </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <div class="copyright text-center">
-        <p>© <span id="year-copy"></span> <strong class="px-1 sitename">Ruphak Varmaa S</strong> — All Rights Reserved</p>
-      </div>
-      <div class="credits">
-        Design base by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a> — customized by Ruphak.
-      </div>
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer band">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span data-year>2026</span> Ruphak Varmaa S</p>
+      <p class="footer-built">Built with plain HTML, CSS and JavaScript.</p>
+      <a class="to-top" href="#top">Back to top<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 12.5v-9M4 7.5l4-4 4 4"/></svg></a>
     </div>
   </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
-
-  <!-- Preloader -->
-  <div id="preloader" role="status" aria-label="Loading"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Tiny helper to update footer year -->
-  <script>
-    document.getElementById('year-copy').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

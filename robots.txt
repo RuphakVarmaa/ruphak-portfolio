@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ruphakvarmaa.github.io/ruphak-portfolio/sitemap.xml
